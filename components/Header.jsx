@@ -80,7 +80,7 @@ function HeaderMenu({ setMenuOpen, handleSignOut }) {
   const navigation = useNavigation();
 
   const menuItems = [
-    { label: "Home", route: "Dashboard", icon: "🏠" },
+    { label: "Home", route: "Home", icon: "🏠" },
     { label: "My Profile", route: "UpdateProfile", icon: "👤" },
     { label: "Water In-Out", route: "WaterInOut", icon: "💧" },
     { label: "BMI Calculator", route: "BMI", icon: "⚖️" },

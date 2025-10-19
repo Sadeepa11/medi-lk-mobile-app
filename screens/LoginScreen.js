@@ -18,7 +18,7 @@ export default function LoginScreen({ navigation, setUser }) {
         if (storedUser) {
           const userInfo = JSON.parse(storedUser);
           setUser(userInfo); // Update global state
-          navigation.replace('Dashboard');
+          navigation.replace('Home');
         }
       } catch (e) {
         console.log('Error checking stored user:', e);
@@ -71,7 +71,7 @@ export default function LoginScreen({ navigation, setUser }) {
 
         await AsyncStorage.setItem('user', JSON.stringify(finalUser));
         setUser(finalUser);
-        navigation.replace('Dashboard');
+        navigation.replace('Home');
 
       } else if (apiResponse.status === 404) {
         // --- NEW USER ---

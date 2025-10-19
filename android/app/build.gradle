@@ -87,11 +87,11 @@ android {
         versionName "8.0"
     }
     signingConfigs {
-    release {
-        storeFile file('release-key.keystore')  // path to your release keystore
-        storePassword 'android'                 // your keystore password
-        keyAlias 'sadeepakey'                   // your key alias
-        keyPassword 'android'                   // your key password
+   release {
+        storeFile file('C:/Users/stf/my-release-key.jks')
+        storePassword 'Sadeepa@123'
+        keyAlias 'key0'
+        keyPassword 'Sadeepa@123'
     }
 }
 
@@ -101,8 +101,10 @@ android {
     }
     release {
         signingConfig signingConfigs.release
-        minifyEnabled enableProguardInReleaseBuilds
+        minifyEnabled false
+        shrinkResources false
         proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+
     }
 }
 }
